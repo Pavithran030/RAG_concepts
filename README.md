@@ -42,9 +42,29 @@ git clone https://github.com/yourusername/RAG_concepts.git
 cd RAG_concepts
 ```
 
-2. Install required packages as needed per notebook
+2. Install required packages:
+```bash
+pip install openai faiss-cpu numpy pandas matplotlib scikit-learn python-dotenv
+```
 
-3. Set up your API keys in a `.env` file
+3. **Set up your API keys securely:**
+
+   a. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+   b. Edit `.env` and add your actual API key:
+   ```
+   OPENROUTER_API_KEY=your_actual_api_key_here
+   ```
+   
+   c. Get your free API key from [OpenRouter](https://openrouter.ai/keys)
+
+   > ⚠️ **Important Security Note:** 
+   > - Never commit your `.env` file to version control
+   > - The `.gitignore` file is configured to exclude `.env` automatically
+   > - All API keys are now loaded from environment variables using `python-dotenv`
 
 ### Running the Labs
 
